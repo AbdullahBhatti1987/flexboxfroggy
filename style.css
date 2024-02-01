@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to right, pink, skyblue, pink);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+header{
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(to right, pink, skyblue, pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 95%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+header ul li:first-child{
+    text-align: center;
+}
+header ul li a{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 2px;
+    margin: 1px auto;
+    color: black;
+    background: linear-gradient(to right, pink, skyblue, pink);
+}
+header ul li a:hover{
+    background: linear-gradient(to right, skyblue, pink, skyblue);
+    font-weight: bold;
+}
+div.container{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 80%;
+    padding: 1%;
+    background: linear-gradient(to right, pink, skyblue, pink);
+}
+div.container h1{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+div.container img{
+    width: 100%;
+    margin: 5px auto;
+}
+div.container a{
+    display: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: sandybrown;
+    font-size: large;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        display: none;
+    }
+    div.container{
+        width: 100%;
+        padding-top: 50px;
+    }
+    div.container h1{
+        background-color: sandybrown;
+        position: fixed;
+        top: 0px;
+        z-index: 99;
+        width: 100%;
+    }
+    div.container img{
+        margin: 2px auto;
+    }
+    div.container a{
+        display: inline-block;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+    }
+}
